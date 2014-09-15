@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "browserify": "^5.11.2",
+    "connect": "^3.2.0",
+    "connect-livereload": "^0.4.0",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.3",
+    "reactify": "^0.14.0",
+    "serve-static": "^1.6.1",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "flux": "^2.0.1",
+    "react": "^0.11.1"
+  }
+}
