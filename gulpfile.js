@@ -13,6 +13,7 @@ gulp.task('default', [], function() {
 
 gulp.task('scripts', function() {
     return browserify({
+            paths: ['./node_modules','./app/components/'],
             entries: ['./app/components/index.js'],
             transform: ['reactify'],
             debug: true
