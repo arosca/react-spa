@@ -3,19 +3,14 @@
 
 var React = require('react');
 
-var HomePage = React.createClass({
-    linkClick: function(e) {
+var Footer = require('footer');
 
-    },
+var HomePage = React.createClass({
     render: function() {
         return (
             <div>
-                Hello Reach SPA Homepage
-                <footer>
-                    <a href="#">Homepage</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </footer>
+                Homepage
+                <Footer />
             </div>
         );
     }

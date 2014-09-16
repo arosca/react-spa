@@ -3,16 +3,14 @@
 
 var React = require('react');
 
+var Footer = require('footer');
+
 var ContactPage = React.createClass({
     render: function() {
         return (
             <div>
-                Hello Contact Page
-                <footer>
-                    <a href="#">Homepage</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </footer>
+                Contact
+                <Footer />
             </div>
         );
     }

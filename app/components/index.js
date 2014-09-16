@@ -25,27 +25,6 @@ var App = React.createClass({
         );
     }
 
-
-    // render: function() {
-    //     return this.state.page;
-    // }
-
-    // render: function() {
-    //     return (
-    //         <div className="app">
-    //             <section>
-    //                 <HomePage />
-    //                 <AboutPage />
-    //                 <ContactPage />
-    //             </section>
-    //             <footer>
-    //                 <a href="#">Homepage</a>
-    //                 <a href="#about">About</a>
-    //                 <a href="#contact">Contact</a>
-    //             </footer>
-    //         </div>
-    //     );
-    // }
 });
 
 React.renderComponent(<App />, document.body);
