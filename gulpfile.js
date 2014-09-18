@@ -34,7 +34,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('.tmp/styles/'))
 });
 
-gulp.task('watch', ['connect'], function() {
+gulp.task('watch', ['styles','scripts','connect'], function() {
     // watch for changes
     var server = $.livereload();
 
