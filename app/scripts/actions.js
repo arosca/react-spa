@@ -10,7 +10,7 @@
  */
 
 var Dispatcher = require('dispatcher');
-var Const = require('./const');
+var Const = require('const');
 
 var Actions = {
 

@@ -3,17 +3,17 @@
 
 var React = require('react');
 
-var Footer = require('footer');
+var Footer = require('components/footer');
 
-var ContactPage = React.createClass({
+var AboutPage = React.createClass({
     render: function() {
         return (
             <div>
-                Contact
+                About
                 <Footer />
             </div>
         );
     }
 });
 
-module.exports = ContactPage;
+module.exports = AboutPage;

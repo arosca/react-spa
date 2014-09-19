@@ -5,7 +5,7 @@ var Dispatcher = require('dispatcher'),
     $ = require('jquery');
 
 var CHANGE_EVENT = 'change',
-    Const = require('./const');
+    Const = require('const');
 
 var counter = 0;;
 

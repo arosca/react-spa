@@ -13,8 +13,8 @@ gulp.task('default', [], function() {
 
 gulp.task('scripts', function() {
     return browserify({
-            paths: ['./node_modules','./app/components/'],
-            entries: ['./app/components/index.js'],
+            paths: ['./node_modules','./app/scripts/'],
+            entries: ['./app/scripts/index.js'],
             transform: ['reactify'],
             debug: true
         })
@@ -27,7 +27,7 @@ gulp.task('styles', function() {
     return gulp.src('app/styles/main.scss')
         .pipe(sass({
             sourcemap: true,
-            includePaths: ['app/components']
+            includePaths: ['app/scripts']
         }))
         .pipe($.autoprefixer())
         .pipe($.rename('bundle.css'))

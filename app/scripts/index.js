@@ -7,9 +7,9 @@ var React = require('react'),
     Routes = Router.Routes,
     Route = Router.Route;
 
-var HomePage = require('pages/homepage/'),
-    AboutPage = require('pages/about'),
-    ContactPage = require('pages/contact');
+var HomePage = require('components/pages/homepage'),
+    AboutPage = require('components/pages/about'),
+    ContactPage = require('components/pages/contact');
 
 var App = React.createClass({
 

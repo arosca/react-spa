@@ -3,9 +3,9 @@
 
 var React = require('react');
 
-var Footer = require('footer'),
-    Store = require('./store'),
-    Actions = require('./actions');
+var Footer = require('components/footer'),
+    Store = require('store'),
+    Actions = require('actions');
 
 var HomePage = React.createClass({
     getInitialState: function() {
