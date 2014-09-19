@@ -26,7 +26,7 @@ var HomePage = React.createClass({
             <div>
                 <header>Homepage</header>
                 <button onClick={this._clickHandler}>Click me</button>
-                <p>Clicks: {this.state.count}</p>
+                Clicks: {this.state.count}
                 <Footer />
             </div>
         );

@@ -13,20 +13,15 @@ var Store = merge(EventEmitter.prototype, {
     emitChange: function() {
         this.emit(CHANGE_EVENT);
     },
+
     getCount: function() {
         return {'count':counter};
     },
 
-    /**
-    * @param {function} callback
-    */
     addChangeListener: function(callback) {
         this.on(CHANGE_EVENT, callback);
     },
 
-    /**
-    * @param {function} callback
-    */
     removeChangeListener: function(callback) {
         this.removeListener(CHANGE_EVENT, callback);
     }
@@ -44,7 +39,7 @@ Dispatcher.register(function(payload) {
             return true;
     }
 
-    Store.emitChange();
+    // Store.emitChange();
 
     return true; // No errors.  Needed by promise in Dispatcher.
 });
