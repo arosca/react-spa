@@ -3,7 +3,8 @@
 
 var React = require('react');
 
-var Footer = require('components/footer'),
+var Header = require('components/header'),
+    Footer = require('components/footer'),
     Store = require('store'),
     Actions = require('actions');
 
@@ -13,7 +14,6 @@ var HomePage = React.createClass({
     },
 
     componentDidMount: function() {
-        this.setState(Store.getCount());
         Store.addChangeListener(this._onChange);
     },
 
@@ -24,7 +24,7 @@ var HomePage = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>Homepage</h1>
+                <Header />
                 <button onClick={this._clickHandler}>Click me</button>
                 Clicks: {this.state.count}
                 <Footer />

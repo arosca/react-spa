@@ -7,9 +7,7 @@ var Footer = React.createClass({
     render: function() {
         return (
             <footer>
-                <a href="#/">Homepage</a>
-                <a href="#/about">About</a>
-                <a href="#/contact">Contact</a>
+            	React SPA
             </footer>
         );
     }

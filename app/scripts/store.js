@@ -52,13 +52,12 @@ Dispatcher.register(function(payload) {
     switch(action.actionType) {
         case Const.COUNTER_INCREMENT:
             counter++;
-            Store.emitChange();
             break;
         default:
             return true;
     }
 
-    // Store.emitChange();
+    Store.emitChange();
 
     return true; // No errors.  Needed by promise in Dispatcher.
 });

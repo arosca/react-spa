@@ -3,7 +3,8 @@
 
 var React = require('react');
 
-var Footer = require('components/footer'),
+var Header = require('components/header'),
+    Footer = require('components/footer'),
     Store = require('store');
 
 var AboutPage = React.createClass({
@@ -12,7 +13,6 @@ var AboutPage = React.createClass({
     },
 
     componentDidMount: function() {
-        this.setState(Store.getContent());
         Store.addChangeListener(this._onChange);
     },
 
@@ -23,7 +23,7 @@ var AboutPage = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>About</h1>
+                <Header />
                 <p>{this.state.content}</p>
                 <Footer />
             </div>
