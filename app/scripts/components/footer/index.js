@@ -7,7 +7,7 @@ var Footer = React.createClass({
     render: function() {
         return (
             <footer>
-            	React SPA
+            	<p>♥ from the Yeoman team</p>
             </footer>
         );
     }

@@ -4,28 +4,33 @@
 var React = require('react');
 
 var Header = require('components/header'),
-	Footer = require('components/footer');
+    Footer = require('components/footer');
 
 var ContactPage = React.createClass({
     render: function() {
         return (
             <div>
-            	<Header />
+                <Header />
+                <div className="jumbotron">
+                    <p className="lead">Finally, get some user data</p>
+                </div>
+
                 <form onSubmit={this._handleSubmit}>
-                	<textarea id="message" placeholder="Message" ref="message"></textarea>
-                	<input type="submit" />
+                    <div><textarea id="message" placeholder="Message" ref="message"></textarea></div>
+                    <input className="btn btn-primary" type="submit" />
                 </form>
+
                 <Footer />
             </div>
         );
     },
 
     _handleSubmit: function(e) {
-    	e.preventDefault();
-    	var message = this.refs.message.getDOMNode().value.trim();
-    	alert(message);
-    	this.refs.message.getDOMNode().value = '';
-    	return;
+        e.preventDefault();
+        var message = this.refs.message.getDOMNode().value.trim();
+        alert(message);
+        this.refs.message.getDOMNode().value = '';
+        return;
     }
 });
 
