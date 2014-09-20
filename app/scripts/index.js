@@ -16,11 +16,11 @@ var App = React.createClass({
     render: function() {
         return (
             <Routes>
-                <Route path="/" handler={HomePage}>
+                <Route name="home" path="/" handler={HomePage}>
                 </Route>
-                <Route path="about" handler={AboutPage}>
+                <Route name="about" path="about" handler={AboutPage}>
                 </Route>
-                <Route path="contact" handler={ContactPage}>
+                <Route name="contact" path="contact" handler={ContactPage}>
                 </Route>
             </Routes>
         );

@@ -16,7 +16,8 @@ var CHANGE_EVENT = 'change',
     Const = require('const');
 
 var counter = 0,
-    text = 'Content loading';
+    text = 'Content loading',
+    message = '';
 
 $.ajax({url:'http://baconipsum.com/api/?type=meat-and-filler'})
     .done(function(data){
@@ -53,6 +54,10 @@ Dispatcher.register(function(payload) {
         case Const.COUNTER_INCREMENT:
             counter++;
             break;
+        case Const.USER_MESSAGE:
+            message = action.text; // do something with the message
+            alert(message);
+            break;            
         default:
             return true;
     }

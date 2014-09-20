@@ -4,7 +4,8 @@
 var React = require('react');
 
 var Header = require('components/header'),
-    Footer = require('components/footer');
+    Footer = require('components/footer'),
+    Actions = require('actions');
 
 var ContactPage = React.createClass({
     render: function() {
@@ -28,7 +29,7 @@ var ContactPage = React.createClass({
     _handleSubmit: function(e) {
         e.preventDefault();
         var message = this.refs.message.getDOMNode().value.trim();
-        alert(message);
+        Actions.userMessage(message);
         this.refs.message.getDOMNode().value = '';
         return;
     }

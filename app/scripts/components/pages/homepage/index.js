@@ -35,13 +35,23 @@ var HomePage = React.createClass({
                 <div className="row marketing">
                     <div className="col-lg-6">
 
+                        <h4>React</h4>
+                        <p>A javascript library for building user interfaces</p>
+
+                        <h4>Flux</h4>
+                        <p>Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow. It's more of a pattern rather than a formal framework, and you can start using Flux immediately without a lot of new code.</p>
+
+                        <h4>Browserify</h4>
+                        <p>Browserify lets you require('modules') in the browser by bundling up all of your dependencies.</p>
+
+                        <h4>Gulp</h4>
+                        <p>The streaming build system</p>
+
                         <h4>Sass</h4>
                         <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
 
                         <h4>Bootstrap</h4>
                         <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-                        <h4>Modernizr</h4>
-                        <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
 
                     </div>
                 </div>
