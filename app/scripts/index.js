@@ -5,7 +5,8 @@ var React = require('react'),
 
     Router = require('react-router'),
     Routes = Router.Routes,
-    Route = Router.Route;
+    Route = Router.Route,
+    DefaultRoute = Router.DefaultRoute;
 
 var HomePage = require('components/pages/homepage'),
     AboutPage = require('components/pages/about'),
@@ -22,6 +23,7 @@ var App = React.createClass({
                 </Route>
                 <Route name="contact" path="contact" handler={ContactPage}>
                 </Route>
+                <DefaultRoute handler={HomePage}/>
             </Routes>
         );
     }

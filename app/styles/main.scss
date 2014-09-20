@@ -6,16 +6,21 @@ body {
     padding-bottom: 20px;
 }
 
+header {
+    a.active {
+        background: #428bca;
+        color: #fff;
+        &:hover {
+            background: #428bca;
+        }
+    }
+}
 
 footer {
 	margin-top: 20px;
     padding-top: 19px;
     color: #777;
     border-top: 1px solid #e5e5e5;
-}
-
-textarea {
-	width: 100%;
 }
 
 .jumbotron {

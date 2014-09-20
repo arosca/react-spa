@@ -11,13 +11,15 @@ var ContactPage = React.createClass({
     render: function() {
         return (
             <div>
-                <Header />
+                <Header activePage="contact" />
                 <div className="jumbotron">
                     <p className="lead">Finally, get some user data</p>
                 </div>
 
                 <form onSubmit={this._handleSubmit}>
-                    <div><textarea id="message" placeholder="Message" ref="message"></textarea></div>
+                    <div className="form-group">
+                        <textarea className="form-control" id="message" placeholder="Message" ref="message"></textarea>
+                    </div>
                     <input className="btn btn-primary" type="submit" />
                 </form>
 

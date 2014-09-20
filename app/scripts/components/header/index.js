@@ -4,7 +4,7 @@
 var React = require('react'),
     Link = require('react-router').Link;
 
-var Footer = React.createClass({
+var Header = React.createClass({
     render: function() {
         return (
             <header>
@@ -19,4 +19,4 @@ var Footer = React.createClass({
     }
 });
 
-module.exports = Footer;
+module.exports = Header;

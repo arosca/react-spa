@@ -24,7 +24,7 @@ var HomePage = React.createClass({
     render: function() {
         return (
             <div>
-                <Header />
+                <Header activePage="home" />
 
                 <div className="jumbotron">
                     <h1>'Allo, 'Allo!</h1>
@@ -62,8 +62,8 @@ var HomePage = React.createClass({
     },
 
     _clickHandler: function(e) {
-        e.preventDefault();
         Actions.increment();
+        return false;
     },
 
     _onChange: function() {

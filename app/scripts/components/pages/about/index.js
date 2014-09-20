@@ -23,7 +23,7 @@ var AboutPage = React.createClass({
     render: function() {
         return (
             <div>
-                <Header />
+                <Header activePage="about" />
                 <div className="jumbotron">
                     <p className="lead">This copy is loaded using ajax in the store</p>
                 </div>
