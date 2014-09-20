@@ -1,10 +1,3 @@
-/*
-Views ---> (actions) ----> Dispatcher ---> (registered callback) ---> Stores -------+
-Ʌ                                                                                   |
-|                                                                                   V
-+-- (Controller-Views "change" event handlers) ---- (Stores emit "change" events) --+
-*/
-
 var Dispatcher = require('dispatcher'),
     EventEmitter = require('events').EventEmitter,
     Actions = require('actions'),
@@ -57,7 +50,7 @@ Dispatcher.register(function(payload) {
         case Const.USER_MESSAGE:
             message = action.text; // do something with the message
             alert(message);
-            break;            
+            break;
         default:
             return true;
     }

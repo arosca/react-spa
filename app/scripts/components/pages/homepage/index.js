@@ -24,15 +24,15 @@ var HomePage = React.createClass({
     render: function() {
         return (
             <div>
-                <Header activePage="home" />
+                <Header />
 
                 <div className="jumbotron">
                     <h1>'Allo, 'Allo!</h1>
                     <p className="lead">This is how state works</p>
-                    <p><a className="btn btn-lg btn-success" href="#" onClick={this._clickHandler}>Clicked me {this.state.count} times!</a></p>
+                    <p><a className="btn btn-lg btn-success" href="#" onClick={this._clickHandler}>Clicked {this.state.count} times!</a></p>
                 </div>
 
-                <div className="row marketing">
+                <div className="row">
                     <div className="col-lg-6">
 
                         <h4>React</h4>

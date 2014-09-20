@@ -11,7 +11,8 @@ var ContactPage = React.createClass({
     render: function() {
         return (
             <div>
-                <Header activePage="contact" />
+                <Header />
+
                 <div className="jumbotron">
                     <p className="lead">Finally, get some user data</p>
                 </div>

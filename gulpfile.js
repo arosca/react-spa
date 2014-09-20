@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
     sass = require('gulp-sass'),
+    gulpif = require('gulp-if'),
     $ = require('gulp-load-plugins')();
 
 gulp.task('default', [], function() {
@@ -67,3 +68,17 @@ gulp.task('connect', function() {
             console.log('Started connect web server on http://localhost:9000');
         });
 });
+
+gulp.task('html', ['styles', 'scripts'], function () {
+    var assets = $.useref.assets({searchPath: '{.tmp,app}'});
+
+    return gulp.src('app/*.html')
+        .pipe(assets)
+        .pipe(gulpif('*.js', $.uglify()))
+        .pipe(gulpif('*.css', $.minifyCss()))
+        .pipe(assets.restore())
+        .pipe($.useref())
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('build', ['html']);

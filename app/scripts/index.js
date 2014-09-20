@@ -1,6 +1,13 @@
 /** @jsx React.DOM */
 'use strict';
 
+/*
+Views ---> (actions) ----> Dispatcher ---> (registered callback) ---> Stores -------+
+Ʌ                                                                                   |
+|                                                                                   V
++-- (Controller-Views "change" event handlers) ---- (Stores emit "change" events) --+
+*/
+
 var React = require('react'),
 
     Router = require('react-router'),
@@ -23,7 +30,6 @@ var App = React.createClass({
                 </Route>
                 <Route name="contact" path="contact" handler={ContactPage}>
                 </Route>
-                <DefaultRoute handler={HomePage}/>
             </Routes>
         );
     }
