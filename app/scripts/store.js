@@ -1,5 +1,13 @@
+/*
+Views ---> (actions) ----> Dispatcher ---> (registered callback) ---> Stores -------+
+Ʌ                                                                                   |
+|                                                                                   V
++-- (Controller-Views "change" event handlers) ---- (Stores emit "change" events) --+
+*/
+
 var Dispatcher = require('dispatcher'),
     EventEmitter = require('events').EventEmitter,
+    Actions = require('actions'),
     merge = require('react/lib/merge'),
 
     $ = require('jquery');
@@ -7,7 +15,14 @@ var Dispatcher = require('dispatcher'),
 var CHANGE_EVENT = 'change',
     Const = require('const');
 
-var counter = 0;;
+var counter = 0,
+    text = 'Content loading';
+
+$.ajax({url:'http://baconipsum.com/api/?type=meat-and-filler'})
+    .done(function(data){
+        text = data[0];
+        Store.emitChange();
+    })
 
 var Store = merge(EventEmitter.prototype, {
     emitChange: function() {
@@ -16,6 +31,10 @@ var Store = merge(EventEmitter.prototype, {
 
     getCount: function() {
         return {'count':counter};
+    },
+
+    getContent: function() {
+        return {'content':text};
     },
 
     addChangeListener: function(callback) {

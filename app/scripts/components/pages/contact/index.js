@@ -9,7 +9,7 @@ var ContactPage = React.createClass({
     render: function() {
         return (
             <div>
-                Contact
+                <h1>Contact</h1>
                 <Footer />
             </div>
         );
