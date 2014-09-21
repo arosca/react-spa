@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     serveStatic = require('serve-static'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-ruby-sass'),
     gulpif = require('gulp-if'),
     $ = require('gulp-load-plugins')();
 
@@ -27,8 +27,8 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
     return gulp.src('app/styles/main.scss')
         .pipe(sass({
-            sourcemap: true,
-            includePaths: ['app/scripts']
+            // sourcemap: true,
+            // sourcemapPath: '../scss'
         }))
         .pipe($.autoprefixer())
         .pipe($.rename('bundle.css'))
