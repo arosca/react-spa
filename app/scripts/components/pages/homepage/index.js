@@ -34,7 +34,6 @@ var HomePage = React.createClass({
 
                 <div className="row">
                     <div className="col-lg-6">
-
                         <h4>React</h4>
                         <p>A javascript library for building user interfaces</p>
 
@@ -43,16 +42,17 @@ var HomePage = React.createClass({
 
                         <h4>Browserify</h4>
                         <p>Browserify lets you require('modules') in the browser by bundling up all of your dependencies.</p>
+                    </div>
 
-                        <h4>Gulp</h4>
-                        <p>The streaming build system</p>
-
+                    <div className="col-lg-6">
                         <h4>Sass</h4>
                         <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
 
                         <h4>Bootstrap</h4>
                         <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
+                        <h4>Gulp</h4>
+                        <p>The streaming build system</p>
                     </div>
                 </div>
 
